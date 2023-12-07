@@ -1,0 +1,239 @@
+/* styles.css */
+
+#root {
+  margin: 0 auto;
+  /* padding: 1rem; */
+}
+
+body {
+  background-color: rgb(179, 217, 181);
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 260px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 153, 255);
+  border-radius: 15px;
+  padding: 1rem;
+  flex-direction: column;
+  margin-right: 2%;
+  margin-left: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  background-color: rgba(224, 224, 224, 0.805);
+  border-radius: 30px;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.boxName {
+  width: 1000px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.linebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.Refresh {
+  margin: 1.5%;
+  background-color: bisque;
+  box-shadow: 0 0 10px rgba(127, 127, 127, 0.5);
+}
+.Refresh:hover {
+  background-color: sandybrown;
+  color: rgb(255, 255, 255);
+  border-color: #ccff00; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(255, 225, 0, 0.5);
+}
+
+nav {
+  background-color: rgb(5, 124, 36);
+  padding: 10px;
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.headernav {
+  display: flex;
+  flex-direction: row;
+  width: 1516px;
+  margin-top: 0%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonsum {
+  width: 130%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bodycontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.collumnavHome {
+  align-items: center;
+  margin: 10px;
+  color: rgb(4, 255, 0);
+}
+
+.collumnav {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: azure;
+}
+
+.ADDSub {
+  margin-right: 2%;
+  margin-left: 2%;
+  background-color: rgb(127, 255, 127);
+  box-shadow: 0 0 10px rgba(48, 48, 48, 0.522);
+}
+.ADDSub:hover {
+  margin-right: 2%;
+  margin-left: 2%;
+  background-color: rgb(28, 194, 236);
+  color: azure;
+  border-color: #00f2ff; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.AddPeople {
+  margin-right: 10px;
+  width: 180px;
+  height: 35px;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(121, 121, 121, 0.5);
+  border: 0;
+}
+
+.AddPeople:focus {
+  border-color: #00f2ff; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  background-color: rgba(120, 255, 255, 0.278);
+  outline: none; /* ปิดการแสดง outline เวลา focus (สำหรับบาง browser) */
+  color: rgb(5, 162, 0);
+}
+.EditPeople {
+  color: #000000;
+  margin: 10px;
+  width: 300px;
+  height: 35px;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(121, 121, 121, 0.5);
+  border: 0;
+}
+
+.EditPeople:focus {
+  border-color: #858585; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.278);
+  outline: none; /* ปิดการแสดง outline เวลา focus (สำหรับบาง browser) */
+  color: rgb(43, 255, 0);
+}
+
+.DeleteButton {
+  margin-top: 15px;
+  background-color: rgb(255, 114, 114);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.DeleteButton:hover {
+  background-color: rgb(255, 0, 0);
+  color: black;
+  border-color: #ff0000; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+.EditButton {
+  margin-top: 15px;
+  background-color: rgb(114, 199, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.EditButton:hover {
+  background-color: rgb(0, 76, 255);
+  color: rgb(0, 0, 0);
+  border-color: #00d9ff; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(13, 0, 255, 0.5);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* สีพื้นหลังที่โปร่งแสง */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* ตั้งค่า z-index เพื่อให้ Modal อยู่บนสุด */
+}
+
+.modal-content {
+  background: #60e392; /* สีพื้นหลังของ Modal */
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 340px; /* กำหนดขนาดของ Modal */
+  width: 100%;
+}
+
+.close-button {
+  /* position: absolute; */
+  /* top: 10px;
+  right: 10px; */
+  background: rgb(255, 98, 98);
+  border: none;
+  color: #ffffff; /* สีของปุ่มปิด */
+  border-color: #ff0000; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.684);
+}
+.close-button:hover {
+  /* position: absolute; */
+  /* top: 10px;
+  right: 10px; */
+  background: rgb(255, 0, 0);
+  color: #000000; /* สีของปุ่มปิด */
+  border-color: #ff0000; /* กำหนดสีที่คุณต้องการเมื่อ focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.693);
+}
+
+.EditSum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  flex-direction: column;
+}
