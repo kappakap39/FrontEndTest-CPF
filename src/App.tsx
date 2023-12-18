@@ -9,6 +9,7 @@ import ShowProduct from './FrontEnd/Product/ShowProduct';
 import CategoryProduct from './FrontEnd/Product/CategoryProduct';
 import ShowOrder from './FrontEnd/Order/ShowOrder';
 import OrderDetails from './FrontEnd/Order/OrderDetail';
+import Login from './FrontEnd/Login';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           
-          <Route path="/" element={<Index/>}></Route>
+          <Route path="/" element={<Login/>}></Route>
+          <Route path="/Index" element={<Index/>}></Route>
           <Route path="/ShowUser" element={<ShowUser/>}></Route>
           <Route path="/ShowProduct" element={<ShowProduct/>}></Route>
           <Route path="/CategoryProduct" element={<CategoryProduct/>}></Route>

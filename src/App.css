@@ -1,5 +1,4 @@
 /* styles.css */
-
 #root {
   margin: 0 auto;
   /* padding: 1rem; */
@@ -44,12 +43,14 @@ h1 {
   width: 80%;
 }
 .boxName {
-  width: 1000px;
+  width: 1180px;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  overflow-x: auto;
+  border-radius: 15px;
 }
 
 .linebutton {
@@ -88,7 +89,14 @@ nav {
 }
 
 .buttonsum {
-  width: 130%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonModal {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -167,7 +175,7 @@ nav {
 }
 
 .DeleteButton {
-  margin-top: 15px;
+  margin: 10px;
   background-color: rgb(255, 114, 114);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -178,7 +186,7 @@ nav {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 .EditButton {
-  margin-top: 15px;
+  margin: 10px;
   background-color: rgb(114, 199, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -236,4 +244,14 @@ nav {
   align-items: center;
   margin: 15px;
   flex-direction: column;
+}
+.login {
+  height: 60vh;
+  width: 80vh;
+  background-color: #ffffff75;
+  border-radius: 10%;
+}
+.inputLogin{
+  height: 40px;
+  padding-left: 2.5%;
 }

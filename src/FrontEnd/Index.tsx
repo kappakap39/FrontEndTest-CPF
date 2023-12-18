@@ -78,21 +78,22 @@ function index() {
                             showConfirmButton: false,
                             timer: 1500,
                         });
-                        window.location.reload();
+                        setIsModalOpen(false);
+                        setValues({
+                            PeopleID: "",
+                            Username: "",
+                            Email: "",
+                            FirstName: "",
+                            LastName: "",
+                            Tel: "",
+                        });
+                        fetchData();  // ดึงข้อมูลใหม่หลังจากแก้ไข
                     })
                     .catch((err) => console.log(err));
-                setIsModalOpen(false);
-                setValues({
-                    PeopleID: "",
-                    Username: "",
-                    Email: "",
-                    FirstName: "",
-                    LastName: "",
-                    Tel: "",
-                });
             }
         });
     };
+
 
     //!
     useEffect(() => {
@@ -121,6 +122,7 @@ function index() {
     });
     console.log("values", values)
 
+    //!ADD people
     const handleSubmit = (event: any) => {
         event.preventDefault();
         MySwal.fire({
@@ -227,7 +229,7 @@ function index() {
                                     <button className="EditButton" onClick={() => handleEditClick(People)}>
                                         Edit
                                     </button>
-                                    <form action="">
+                                    <form action="" onSubmit={handleUpdate}>
                                         <EditPeople isOpen={isModalOpen} onClose={handleCloseModal} onEdit={handleUpdate}>
                                             <div className="modal-content">
                                                 <div className='EditSum' >
@@ -240,7 +242,7 @@ function index() {
                                                     <input value={values.Email} onChange={handleInput} name='Email' className='EditPeople' placeholder='Email' type="email" />
                                                     <input value={values.Tel} onChange={handleInput} name='Tel' className='EditPeople' placeholder='Tel' type="text" />
                                                 </div>
-                                                <div className='buttonsum'>
+                                                <div className='buttonModal'>
                                                     <button className="EditButton" >Save</button>
                                                     <button className="close-button" onClick={handleCloseModal} >Cancel</button>
                                                 </div>
@@ -252,7 +254,7 @@ function index() {
                         ))}
                     </div>
                 </div>
-                <form action="" onSubmit={handleSubmit}>
+                <form action="" onSubmit={handleSubmit} >
                     <div className='linebutton' >
                         <input value={values.Username} onChange={handleInput} name='Username' className='AddPeople' placeholder='Username' type="text" />
                         <input value={values.Email} onChange={handleInput} name='Email' className='AddPeople' placeholder='Email' type="email" />
