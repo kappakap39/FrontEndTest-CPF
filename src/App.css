@@ -108,7 +108,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  height: 78vh;
 }
 
 .collumnavHome {
@@ -252,6 +252,21 @@ nav {
   border-radius: 10%;
 }
 .inputLogin{
+  width: 70%;
   height: 40px;
   padding-left: 2.5%;
+}
+
+.buttonSent{
+  width: 20%;
+  margin-bottom: 5%;
+}
+
+.sent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit{
+  margin-top: 5%;
 }
