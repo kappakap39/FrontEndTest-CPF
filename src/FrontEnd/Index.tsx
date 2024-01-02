@@ -8,8 +8,34 @@ import MenuNav from "./MenuNav/NavIndex";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import EditPeople from './Modal/EditPeople';
+import { useLocation } from 'react-router-dom';
+
+interface UserData {
+    FirstName: string;
+    LastName: string;
+}
 
 function index() {
+
+    const location = useLocation();
+    const [userData, setUserData] = useState<UserData[]>([]);
+
+    useEffect(() => {
+        const searchParams = new URLSearchParams(location.search);
+        const userID = searchParams.get('UserID');
+        if (userID) {
+            // Assuming you have an API endpoint to fetch user data by UserID
+            axios.get(`http://localhost:8080/user/getUserByID/${userID}`)
+                .then((res) => {
+                    setUserData(res.data); // Set user data to state
+                })
+                .catch((err) => {
+                    console.log(err);
+                    // Handle error
+                });
+        }
+    }, [location.search]);
+    console.log("userData", userData);
 
     const [data, setData] = useState({ Peoples: [] });
     const MySwal = withReactContent(Swal);
@@ -204,7 +230,8 @@ function index() {
             <div className='bodycontainer'>
                 <div className='box'>
                     <div>
-                        <h1>PeoPle</h1>
+                    <h1>{userData.length > 0 ? `${userData[0].FirstName} ${userData[0].LastName}` : 'Loading...'}</h1>
+                    {/* <h1>PeoPle</h1> */}
                     </div>
                     <div className='boxName'>
                         {data.Peoples.map((People: any) => (

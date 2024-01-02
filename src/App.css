@@ -252,6 +252,10 @@ nav {
   border-radius: 10%;
 }
 .inputLogin{
+  height: 40px;
+  padding-left: 2.5%;
+}
+.inputLoginOTP{
   width: 70%;
   height: 40px;
   padding-left: 2.5%;

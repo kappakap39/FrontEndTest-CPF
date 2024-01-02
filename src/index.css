@@ -102,3 +102,8 @@ button:focus-visible {
   height: 5px;
 }
 
+.date-range-input .rdrDateRangeWrapper {
+  font-size: 12px; /* ปรับขนาดของ input ตามต้องการ */
+  width: 200px; /* ปรับความกว้างของ input ตามต้องการ */
+}
+

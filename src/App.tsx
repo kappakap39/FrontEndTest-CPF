@@ -10,6 +10,7 @@ import CategoryProduct from './FrontEnd/Product/CategoryProduct';
 import ShowOrder from './FrontEnd/Order/ShowOrder';
 import OrderDetails from './FrontEnd/Order/OrderDetail';
 import Login from './FrontEnd/Login';
+import LoginOTP from './FrontEnd/LoginOTP';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           
           <Route path="/" element={<Login/>}></Route>
+          <Route path="/LoginOTP" element={<LoginOTP/>}></Route>
           <Route path="/Index" element={<Index/>}></Route>
           <Route path="/ShowUser" element={<ShowUser/>}></Route>
           <Route path="/ShowProduct" element={<ShowProduct/>}></Route>
